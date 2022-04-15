@@ -1,7 +1,7 @@
 """
 图片预处理,
 分别提取两类图片的LBP特征并添加标签
-将特征及标签存入Excel表格中
+将特征及标签存入txt文档中
 """
 import os
 import numpy as np
@@ -62,7 +62,3 @@ if __name__ == "__main__":
 
     np.savetxt("lbpdata.txt", datas, fmt="%.1f")
     np.savetxt("lbpID.txt", ids, fmt="%d")
-    # with open("lbpID.txt", "w") as fp:
-    #     [fp.write(str(item) + '\n') for item in ids]
-
-
