@@ -15,8 +15,7 @@ pre_processing.py是数据处理文件，用于获取数据集中的图像的LBP
 test.py文件用于测试
 
 # 实验结果：
-![maze]
-(https://github.com)
+![result](https://github.com/debug8081/2022CV/raw/main/Group2/adaboost_4_6/result.jpg)
 
 # 改进思路（猜测，未实验）：
 1、设计数据集正负样本时可以增加或修改样本数量。目前项目中样本数量为人脸图片50张，来自CelebA数据集的编号000001-000050
@@ -29,6 +28,6 @@ test.py文件用于测试
 
 # requirements
 you can install all the requirements by executing below.
-
+```
 # in <path-to-this-repo>
 pip install -r requirements.txt
