@@ -1,0 +1,5 @@
+numpy~=1.22.3
+pillow~=9.1.0
+scikit-image~=0.19.2
+pandas~=1.4.2
+openpyxl~=3.0.9
