@@ -8,7 +8,7 @@ mpDraw = mp.solutions.drawing_utils
 mpPose = mp.solutions.pose
 pose = mpPose.Pose()
 
-cap = cv2.VideoCapture('F:/human identity/video/1.mp4')
+cap = cv2.VideoCapture('F:/human identity/video/3.mp4')
 pTime = 0
 
 #进入循环，读取视频
@@ -17,10 +17,18 @@ while True:
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = pose.process(imgRGB)
     #将姿态检测的点打印出来，显示在输出栏上
-    print(results.pose_landmarks)
+    #print(results.pose_landmarks)
     #将姿态检测的点连成线
     if results.pose_landmarks:
         mpDraw.draw_landmarks(img, results.pose_landmarks, mpPose.POSE_CONNECTIONS)
+        for id, lm in enumerate(results.pose_landmarks.landmark):
+            h, w, c = img.shape
+            print(id, lm)
+            cx, cy = int(lm.x * w), int(lm.y * h)
+            cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
+
+
+
     #计算视频的fps值，并反馈到视频上
     cTime = time.time()
     fps = 1/(cTime-pTime)
@@ -28,7 +36,7 @@ while True:
     cv2.putText(img, str(int(fps)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
     #设置窗口名称为Image，调整大小为640*480
     cv2.namedWindow('Image', cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Image", 640, 480)
+    cv2.resizeWindow("Image", 1280, 780)
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
