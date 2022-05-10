@@ -1,0 +1,13 @@
+numpy
+matplotlib
+Scikit-image
+#sklearn
+opencv-python
+Pillow
+tensorflow==1.12.0
+keras==2.1.1
+tqdm
+IPython
+configobj
+scipy
+h5py==2.10.0
