@@ -1,7 +1,7 @@
 组长：王以恒
 组员：吴悠 袁忻泽 陈云龙 董子萱
 代码运行说明如下：
-对于可视化模块，一共有4个.py文件，分别是chinese.py/identity_processviedo.py/identity_videointopicture.py以及identity_Visualization.py
+对于可视化模块，在Visualization文件夹下一共有4个.py文件，分别是chinese.py/identity_processviedo.py/identity_videointopicture.py以及identity_Visualization.py
 直接打开identity_Visualization.py，在if __name__ =="__main__":下中输入以下代码：
         video_path = 'F:/human identity/video/4.mp4'视频输入文件路径（包含文件名）
         pic_path = 'F:/human identity/pic/'（视频图片输入路径，不含文件名，下属文件夹就行）
