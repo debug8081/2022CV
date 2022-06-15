@@ -17,7 +17,7 @@ model_data文件夹存放的MTCNN网络的模型。
 cnn_check.py文件为CNN网络测试文件，该文件运行了测试集中所有数据，统计预测正确率，
 并且返回预测错误图像。
 
-CNNtest.py是单一图片的CNN预测文件。（可以直接运行，log文件夹中已经包含训练好的模型）
+CNNtest.py是单一图片的CNN预测文件。（将log文件夹整理好后可以直接运行）
 CNNtrain.py是CNN网络的训练文件。（训练用数据集需要解压）
 
 model.py是MTCNN网络的模型文件
@@ -30,3 +30,12 @@ video.mp4和result.mp4为效果展示文件。
 
 # requirements
 requirements.txt文件为项目中用到的包。
+
+# 运行方式
+下载网盘内已经训练好的模型后放到log文件夹下，进入项目后修改main.py文件中路径为想使用的路径，之后运行即可
+
+# 训练方式
+这里提供CNN网络训练方式，MTCNN网络由于硬件及时间的原因直接使用了已训练好的文件。
+将要图片训练集放在data文件夹下，按照文件夹名称放置，运行CNNtrain.py文件即可训练
+CNNtest.py文件用于测试单张图片的预测结果，CNN_check.py文件为批量测试文件，能够统计正确率。
+测试集图片位于data文件夹下，按照文件名称放置
